@@ -1,0 +1,91 @@
+/* Reset para que todos los márgenes y paddings estén en 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+}
+
+/* Estilo del menú horizontal */
+.top-menu {
+	width: 100%;
+	background-color: #34495e;
+	text-align: absolute;
+	padding: 10px;
+	position: fixed;
+    top: 0;
+}
+
+.top-menu a ,p {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 0px;
+}
+
+.top-menu a:hover {
+	background-color: #2c3e50;
+	border-radius: 5px;
+}
+
+/* Espacio debajo de la barra de navegación para que el contenido no se solape */
+body {
+    padding-top: 40px; /* Ajusta según el tamaño de la barra */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 75%; /* Ajusta el tamaño de la container */
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/* Estilo para las columnas */
+.column {
+    width: 45%; /* Cada columna ocupará el 45% del contenedor */
+}
+
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+li {
+    margin: 10px 0;
+	padding: 5px;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #3498db; /* Color de los enlaces */
+	padding: 10px 15px;
+}
+
+a:hover {
+	background-color: #eeeeee;
+	border-radius: 5px;
+}
+
+/* Ajustar el contenido principal para que no se solape con los menús */
+.content {
+	width: 100%; 
+	margin-top: 50px; /* Espacio para el menú horizontal */
+}
+
+section {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+/* Estilo para las secciones */
+section h2 {
+	margin-bottom: 20px;
+	color: #2c3e50;
+}

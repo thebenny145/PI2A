@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Aprendizaje de "redes computacionales"</title>
+		<link rel="stylesheet" href="css\estilo1.css">
+	</head>
+
+	<body>
+
+		<!-- Menú horizontal -->
+		<div class="top-menu">
+			<p><b>Proyecto</b>
+			<a href="inicio.html">Inicio</a></p>
+		</div>
+
+		<div class="container">
+		
+			<!-- Menú vertical -->
+			<div class="sidebar">
+				<a href="tema1.html">¿Qué es internet?</a>
+				<a href="tema2.html">Internet de las cosas</a>
+				<a href="tema3.html">Protocolos de red</a>
+				<a href="tema4.html">La frontera de la red</a>
+				<a href="tema5.html">Medios físicos</a>
+				<a href="tema6.html">Tipos de redes</a>
+				<a href="tema7.html">VPN</a>
+				<a href="tema8.html">Conmutación de paquetes</a>
+			</div>
+
+			<!-- Contenido de la página -->
+			<div class="content">
+				<section>
+					<h2>Medios físicos</h2>
+						<p>Un medio físico es responsable de transmitir bits a través de ondas electromagnéticas o pulsos ópticos. Estos medios se pueden clasificar en dos categorías: medios guiados y medios no guiados.
+						<br><br>
+						En los medios guiados, las ondas se dirigen a través de un medio sólido, como un cable de fibra óptica, un cable de cobre de par trenzado o un cable coaxial. Por otro lado, en los medios no guiados, las ondas se propagan a través de la atmósfera y el espacio exterior, como sucede en las redes LAN inalámbricas o en un canal de satélite digital.</p>
+					<h3>Fibra óptica</h3>
+						<p>La fibra óptica es un medio delgado y flexible que transmite pulsos de luz, representando cada pulso con un bit. Un solo cable de fibra óptica puede admitir velocidades de bits extremadamente altas, alcanzando hasta decenas o incluso centenares de gigabits por segundo. La fibra óptica es resistente a las interferencias electromagnéticas, presenta una atenuación de señal muy baja para distancias de hasta 100 kilómetros y es altamente segura contra intentos de manipulación.</p><br>
+					
+				<div class="question-container">
+					<h3>Responde lo siguiente:</h3>
+					<p>Son los responsables de transmitir bits a través de ondas electromagnéticas o pulsos ópticos.</p>
+					<div class="options">
+						<input type="radio" id="opcion1" name="respuesta" value="0">
+						<label for="opcion1">Routers</label><br><br>
+
+						<input type="radio" id="opcion2" name="respuesta" value="1">
+						<label for="opcion2">Medios físicos</label><br><br>
+
+						<input type="radio" id="opcion3" name="respuesta" value="2">
+						<label for="opcion3">Switches</label><br>
+					</div>
+					<button onclick="verificarRespuesta()"><b>Verificar</b></button>
+					<div class="feedback" id="feedback"></div>
+				</div><br>
+
+				<script>
+					function verificarRespuesta() {
+						// Obtener todas las opciones de la pregunta
+						const opciones = document.getElementsByName('respuesta');
+						let respuestaSeleccionada = null;
+						
+						// Buscar cuál opción ha sido seleccionada
+						for (let i = 0; i < opciones.length; i++) {
+							if (opciones[i].checked) {
+								respuestaSeleccionada = opciones[i].value;
+								break;
+							}
+						}
+
+						// Comprobar si se seleccionó una respuesta
+						if (respuestaSeleccionada === null) {
+							document.getElementById('feedback').textContent = "Por favor, selecciona una opción.";
+							return;
+						}
+
+						// Verificar la respuesta
+						if (respuestaSeleccionada === "1") {
+							document.getElementById('feedback').textContent = "¡Correcto!";
+							document.getElementById('feedback').style.color = "green";
+						} else {
+							document.getElementById('feedback').textContent = "Incorrecto. Intenta de nuevo.";
+							document.getElementById('feedback').style.color = "red";
+						}
+					}
+				</script>
+					
+				<center>
+				<iframe width="448" height="258" src="https://www.youtube.com/embed/XVlq1oJGuhg?si=E57QpDI_pzY5JZW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</center>
+					
+				</section>
+			</div>
+			
+		</div>
+
+	</body>
+
+</html>

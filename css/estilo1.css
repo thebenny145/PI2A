@@ -1,0 +1,125 @@
+/* Resetear márgenes y paddings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	display: flex;
+	background-color: #dddddd;
+}
+
+/* Contenido principal de la página */
+.container {
+	width: 100%;
+}
+
+/* Estilo del menú vertical */
+.sidebar {
+	width: 200px;
+	background-color: #2c3e50;
+	padding: 20px;
+	position: fixed;
+	height: 100vh;
+	margin-top: 59px;
+}
+
+.sidebar a{
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.sidebar a:hover {
+	background-color: #34495e;
+}
+
+/* Estilo del menú horizontal */
+.top-menu {
+	width: 100%;
+	background-color: #34495e;
+	text-align: absolute;
+	padding: 10px;
+	position: fixed;
+}
+
+.top-menu a ,p {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 0px;
+}
+
+.top-menu a:hover {
+	background-color: #2c3e50;
+	border-radius: 5px;
+}
+
+/* Ajustar el contenido principal para que no se solape con los menús */
+.content {
+	margin-left: 220px; /* Espacio para el menú vertical */
+	margin-top: 70px; /* Espacio para el menú horizontal */
+	padding: 20px;
+	width: calc(100% - 240px); /* Ajusta el contenido */
+}
+
+.content p {
+	color: black;
+	text-align: justify;
+}
+
+.content li {
+	margin-left: 70px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+/* Estilo para las secciones */
+section h2 {
+	margin-bottom: 10px;
+	color: #2c3e50;
+}
+
+section h3 {
+	
+	margin: 15px;
+	color: black;
+}
+
+section p {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+/* Estilo básico para mejorar la visualización */
+.question-container {
+	margin: auto;
+	width: 70%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: aaa;
+}
+.options {
+	margin: 15px;
+	margin-left: 30px;
+}
+.feedback {
+	margin: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+button{
+	margin: auto;
+	display: block;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 13px;
+}

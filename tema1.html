@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Aprendizaje de "redes computacionales"</title>
+		<link rel="stylesheet" href="css\estilo1.css">
+	</head>
+
+	<body>
+
+		<!-- Menú horizontal -->
+		<div class="top-menu">
+			<p><b>Proyecto</b>
+			<a href="inicio.html">Inicio</a></p>
+		</div>
+
+		<div class="container">
+		
+			<!-- Menú vertical -->
+			<div class="sidebar">
+				<a href="tema1.html">¿Qué es internet?</a>
+				<a href="tema2.html">Internet de las cosas</a>
+				<a href="tema3.html">Protocolos de red</a>
+				<a href="tema4.html">La frontera de la red</a>
+				<a href="tema5.html">Medios físicos</a>
+				<a href="tema6.html">Tipos de redes</a>
+				<a href="tema7.html">VPN</a>
+				<a href="tema8.html">Conmutación de paquetes</a>
+			</div>
+
+			<!-- Contenido de la página -->
+			<div class="content">
+				<section>
+					<h2>¿Qué es internet?</h2>
+					<p>Miles de millones de computadoras están conectados a través de una red mundial de computadoras llamada Internet. No hace mucho, estos dispositivos eran principalmente computadoras de escritorio convencionales. Sin embargo, cada vez más "cosas" (dispositivos) no tradicionales están conectados a Internet. Todos estos dispositivos se conocen como hosts o sistemas terminales en el lenguaje de Internet.
+					<br><br>
+					La conectividad a través del acceso a Internet proporciona a los usuarios domésticos la posibilidad de conectarse con computadoras ubicadas en lugares remotos. De manera similar a las empresas, los usuarios en el ámbito doméstico pueden acceder a información, comunicarse con otras personas y realizar compras de productos y servicios a través del comercio electrónico.
+					<br><br>
+					Los conmutadores de paquetes y una red de enlaces de comunicaciones conectan los sistemas terminales entre sí. El cable coaxial, el cable de cobre, la fibra óptica y el espectro de radio son solo algunos de los muchos tipos de medios físicos que componen los enlaces de comunicaciones. La velocidad de transmisión de un enlace se mide en bits/segundo, y cada enlace puede transmitir datos a una velocidad diferente.
+					<br><br>
+					“Los paquetes de información resultantes, también conocidos como paquetes en la jerga informática, se envían a través de la red al sistema terminal receptor, donde vuelven a ser ensamblados para obtener los datos originales.”
+					<br><br>
+					Un conmutador de paquetes recibe un paquete de uno de sus enlaces de entrada y luego lo reenvía a uno de sus enlaces de salida. Los routers y los switches de capa de enlace son los dos tipos más utilizados de conmutadores de paquetes en Internet en la actualidad. Ambos tipos de conmutadores envían paquetes a sus lugares de destino. En las redes de acceso, los switches de capa de enlace suelen usarse en las redes de acceso, mientras que los routers suelen usarse en el núcleo de la red.
+					<br><br>
+					Los dispositivos terminales se conectan a la red de Internet mediante proveedores de servicios de Internet (ISP), que abarcan desde ISP residenciales, como las empresas telefónicas o de cable locales, hasta ISP corporativos, universitarios, aquellos que ofrecen acceso inalámbrico (Wifi) en lugares públicos como aeropuertos, hoteles y cafeterías, y los proveedores de servicios de datos móviles que suministran acceso móvil a dispositivos como teléfonos inteligentes.
+					<br><br>
+					Cada ISP constituye por sí mismo una red compuesta por conmutadores de paquetes y conexiones de comunicación. Estos ISP ofrecen diversos tipos de acceso a las terminales, que abarcan desde el acceso residencial de banda ancha a través de módems de cable o DSL, hasta el acceso de alta velocidad mediante redes de área local (LAN) y la conexión inalámbrica para dispositivos móviles. Además, los ISP facilitan el acceso a Internet para los proveedores de contenido, estableciendo conexiones directas entre sitios web y servidores de vídeo y la red global. Dado que el objetivo de Internet es conectar sistemas terminales entre sí, los ISP que brindan acceso a estos sistemas deben estar interconectados. Los ISP de nivel inferior establecen conexiones entre sí y también se conectan a ISP de nivel superior, tanto a nivel nacional como internacional, como Level 3 Communications, AT&T, Sprint y NTT. Un ISP de nivel superior consiste en routers de alta velocidad que se conectan entre sí mediante enlaces de fibra óptica de alta velocidad. Tanto las redes de ISP de nivel inferior como las de nivel superior están gestionadas de manera independiente. Ambas ejecutan el protocolo IP y siguen ciertos acuerdos en términos de denominación y asignación de direcciones.
+					<br><br>
+					Los dispositivos de Internet, como sistemas terminales y conmutadores de paquetes, operan mediante protocolos que gestionan el envío y recepción de información en la red. Dos de los protocolos más fundamentales son el TCP (Protocolo de Control de Transmisión) y el IP (Protocolo de Internet). El protocolo IP define la estructura de los paquetes transmitidos entre routers y sistemas terminales. Los protocolos clave de Internet se agrupan bajo el nombre de protocolos TCP/IP.
+					<br><br>
+					Los estándares de Internet son elaborados por el IETF (Internet Engineering Task Force, Grupo de Trabajo de Ingeniería de Internet). Los documentos que están vinculados a estos estándares del IETF se denominan RFC (Request For Comments, Solicitud de Comentarios). La creación de los RFC surgió como solicitudes de comentarios de naturaleza general para abordar los desafíos de diseño en la red y los protocolos que enfrentó el precursor de Internet. Los RFC definen protocolos fundamentales como TCP, IP, HTTP (para la Web) y SMTP (para el correo electrónico).</p>
+					<br>
+							
+				<div class="question-container">
+					<h3>Responde lo siguiente:</h3>
+					<p>Reciben paquetes de sus enlaces de entrada y luego los reenvían a uno de sus enlaces de salida. (Los routers y los switches de capa de enlace son los dos tipos de ___ más utilizados)</p>
+					<div class="options">
+						<input type="radio" id="opcion1" name="respuesta" value="0">
+						<label for="opcion1">Cable coaxial</label><br><br>
+
+						<input type="radio" id="opcion2" name="respuesta" value="1">
+						<label for="opcion2">Conmutador de paquetes</label><br><br>
+
+						<input type="radio" id="opcion3" name="respuesta" value="2">
+						<label for="opcion3">Terminales</label><br>
+					</div>
+					<button onclick="verificarRespuesta()"><b>Verificar</b></button>
+					<div class="feedback" id="feedback"></div>
+				</div><br>
+
+				<script>
+					function verificarRespuesta() {
+						// Obtener todas las opciones de la pregunta
+						const opciones = document.getElementsByName('respuesta');
+						let respuestaSeleccionada = null;
+						
+						// Buscar cuál opción ha sido seleccionada
+						for (let i = 0; i < opciones.length; i++) {
+							if (opciones[i].checked) {
+								respuestaSeleccionada = opciones[i].value;
+								break;
+							}
+						}
+
+						// Comprobar si se seleccionó una respuesta
+						if (respuestaSeleccionada === null) {
+							document.getElementById('feedback').textContent = "Por favor, selecciona una opción.";
+							return;
+						}
+
+						// Verificar la respuesta
+						if (respuestaSeleccionada === "1") {
+							document.getElementById('feedback').textContent = "¡Correcto!";
+							document.getElementById('feedback').style.color = "green";
+						} else {
+							document.getElementById('feedback').textContent = "Incorrecto. Intenta de nuevo.";
+							document.getElementById('feedback').style.color = "red";
+						}
+					}
+				</script>
+					
+					<center>
+					<iframe width="448" height="258" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</center>
+
+				</section>
+			</div>
+			
+		</div>
+
+	</body>
+
+</html>

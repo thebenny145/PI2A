@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Aprendizaje de "redes computacionales"</title>
+		<link rel="stylesheet" href="css\estilo1.css">
+	</head>
+
+	<body>
+
+		<!-- Menú horizontal -->
+		<div class="top-menu">
+			<p><b>Proyecto</b>
+			<a href="inicio.html">Inicio</a></p>
+		</div>
+
+		<div class="container">
+		
+			<!-- Menú vertical -->
+			<div class="sidebar">
+				<a href="tema1.html">¿Qué es internet?</a>
+				<a href="tema2.html">Internet de las cosas</a>
+				<a href="tema3.html">Protocolos de red</a>
+				<a href="tema4.html">La frontera de la red</a>
+				<a href="tema5.html">Medios físicos</a>
+				<a href="tema6.html">Tipos de redes</a>
+				<a href="tema7.html">VPN</a>
+				<a href="tema8.html">Conmutación de paquetes</a>
+			</div>
+
+			<!-- Contenido de la página -->
+			<div class="content">
+				<section>
+					<h2>Tipos de redes</h2>
+						<h3>PAN</h3>
+						<p>Las redes de área personal, comúnmente conocidas como PAN (Personal Area Network), posibilitan la comunicación entre dispositivos dentro del alcance de una persona. Un ejemplo típico es una red inalámbrica que conecta una computadora con sus periféricos.</p>
+						<h3>LAN</h3>
+						<p>Las redes de área local, conocidas comúnmente como LAN (Local Area Networks), son sistemas de propiedad privada que operan en un solo edificio, como una residencia, una oficina o una fábrica. Las redes LAN son ampliamente empleadas para conectar computadoras personales y dispositivos electrónicos, facilitando la compartición de recursos, como impresoras, y el intercambio de información. Se les denomina "redes empresariales" a las redes LAN utilizadas por empresas.</p>
+						<h3>MAN</h3>
+						<p>Una Red de Área Metropolitana, conocida como MAN (Metropolitan Area Network), abarca toda una ciudad. Un ejemplo destacado de MAN son las redes de televisión por cable que se encuentran disponibles en muchas ciudades.</p>
+						<h3>WAN</h3>
+						<p>Una Red de Área Amplia, o WAN (Wide Area Network), abarca una extensa área geográfica, por lo general un país o continente.</p><br>
+
+				<div class="question-container">
+					<h3>Responde lo siguiente:</h3>
+					<p>Tipo de red que abarca toda una ciudad.</p>
+					<div class="options">
+						<input type="radio" id="opcion1" name="respuesta" value="0">
+						<label for="opcion1">WAN</label><br><br>
+
+						<input type="radio" id="opcion2" name="respuesta" value="1">
+						<label for="opcion2">PAN</label><br><br>
+
+						<input type="radio" id="opcion3" name="respuesta" value="2">
+						<label for="opcion3">MAN</label><br>
+					</div>
+					<button onclick="verificarRespuesta()"><b>Verificar</b></button>
+					<div class="feedback" id="feedback"></div>
+				</div><br>
+
+				<script>
+					function verificarRespuesta() {
+						// Obtener todas las opciones de la pregunta
+						const opciones = document.getElementsByName('respuesta');
+						let respuestaSeleccionada = null;
+						
+						// Buscar cuál opción ha sido seleccionada
+						for (let i = 0; i < opciones.length; i++) {
+							if (opciones[i].checked) {
+								respuestaSeleccionada = opciones[i].value;
+								break;
+							}
+						}
+
+						// Comprobar si se seleccionó una respuesta
+						if (respuestaSeleccionada === null) {
+							document.getElementById('feedback').textContent = "Por favor, selecciona una opción.";
+							return;
+						}
+
+						// Verificar la respuesta
+						if (respuestaSeleccionada === "2") {
+							document.getElementById('feedback').textContent = "¡Correcto!";
+							document.getElementById('feedback').style.color = "green";
+						} else {
+							document.getElementById('feedback').textContent = "Incorrecto. Intenta de nuevo.";
+							document.getElementById('feedback').style.color = "red";
+						}
+					}
+				</script>
+					
+				<center>
+				<iframe width="448" height="258" src="https://www.youtube.com/embed/mx5WVKkioLk?si=xOZPD4R_2ebNN4wJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</center>
+					
+				</section>
+			</div>
+			
+		</div>
+
+	</body>
+
+</html>
